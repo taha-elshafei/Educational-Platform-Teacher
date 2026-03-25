@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>إنشاء حساب - منصة أ/ أمين خليل</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="auth-container">
+    <div class="glow-effect glow-blue"></div>
+    <div class="glow-effect glow-green"></div>
+
+    <div class="auth-card animate-fade-in-up" style="max-width: 580px;">
+      <!-- Logo -->
+      <div class="text-center mb-4">
+        <div style="width:70px;height:70px;border-radius:50%;background:linear-gradient(135deg,var(--color-primary),var(--color-secondary));display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;font-size:1.8rem;">
+          <i class="bi bi-person-plus-fill"></i>
+        </div>
+        <h2>إنشاء حساب جديد</h2>
+        <p class="subtitle">انضم لمنصة أ/ أمين خليل التعليمية</p>
+      </div>
+
+      <!-- Register Form -->
+      <form id="registerForm">
+        <!-- Full Name -->
+        <div class="mb-3">
+          <label class="form-label">الاسم الثلاثي <span style="color:#ef4444;">*</span></label>
+          <div class="input-group">
+            <span class="input-group-text"><i class="bi bi-person-fill"></i></span>
+            <input type="text" class="form-control" placeholder="أدخل الاسم الثلاثي" required>
+          </div>
+        </div>
+
+        <!-- Gender -->
+        <div class="mb-3">
+          <label class="form-label">النوع <span style="color:#ef4444;">*</span></label>
+          <select class="form-select" required>
+            <option value="" disabled selected>اختر النوع</option>
+            <option value="male">ذكر</option>
+            <option value="female">أنثى</option>
+          </select>
+        </div>
+
+        <!-- Governorate -->
+        <div class="mb-3">
+          <label class="form-label">المحافظة <span style="color:#ef4444;">*</span></label>
+          <select class="form-select" required>
+            <option value="" disabled selected>اختر المحافظة</option>
+            <option value="cairo">القاهرة</option>
+            <option value="giza">الجيزة</option>
+            <option value="alex">الإسكندرية</option>
+            <option value="dakahlia">الدقهلية</option>
+            <option value="sharqia">الشرقية</option>
+            <option value="qalyubia">القليوبية</option>
+            <option value="gharbia">الغربية</option>
+            <option value="monufia">المنوفية</option>
+            <option value="beheira">البحيرة</option>
+            <option value="kafr_elsheikh">كفر الشيخ</option>
+            <option value="damietta">دمياط</option>
+            <option value="port_said">بورسعيد</option>
+            <option value="ismailia">الإسماعيلية</option>
+            <option value="suez">السويس</option>
+            <option value="fayoum">الفيوم</option>
+            <option value="beni_suef">بني سويف</option>
+            <option value="minya">المنيا</option>
+            <option value="asyut">أسيوط</option>
+            <option value="sohag">سوهاج</option>
+            <option value="qena">قنا</option>
+            <option value="luxor">الأقصر</option>
+            <option value="aswan">أسوان</option>
+            <option value="red_sea">البحر الأحمر</option>
+            <option value="new_valley">الوادي الجديد</option>
+            <option value="matrouh">مطروح</option>
+            <option value="north_sinai">شمال سيناء</option>
+            <option value="south_sinai">جنوب سيناء</option>
+          </select>
+        </div>
+
+        <!-- Grade -->
+        <div class="mb-3">
+          <label class="form-label">الصف الدراسي <span style="color:#ef4444;">*</span></label>
+          <select class="form-select" required>
+            <option value="" disabled selected>اختر الصف</option>
+            <option value="first">أولى ثانوي</option>
+            <option value="second">ثانية ثانوي</option>
+            <option value="third">ثالثة ثانوي</option>
+          </select>
+        </div>
+
+        <!-- Phone Number -->
+        <div class="mb-3">
+          <label class="form-label">رقم الهاتف <span style="color:#ef4444;">*</span></label>
+          <div class="phone-input-group">
+            <select class="form-select country-code">
+              <option value="+20" selected>+20 🇪🇬</option>
+              <option value="+966">+966 🇸🇦</option>
+              <option value="+971">+971 🇦🇪</option>
+              <option value="+965">+965 🇰🇼</option>
+              <option value="+974">+974 🇶🇦</option>
+              <option value="+973">+973 🇧🇭</option>
+              <option value="+968">+968 🇴🇲</option>
+              <option value="+962">+962 🇯🇴</option>
+              <option value="+964">+964 🇮🇶</option>
+              <option value="+218">+218 🇱🇾</option>
+            </select>
+            <input type="tel" class="form-control" placeholder="أدخل رقم الهاتف" required>
+          </div>
+        </div>
+
+        <!-- Password -->
+        <div class="mb-3">
+          <label class="form-label">كلمة السر <span style="color:#ef4444;">*</span></label>
+          <div class="input-group">
+            <span class="input-group-text"><i class="bi bi-lock-fill"></i></span>
+            <input type="password" class="form-control" id="passwordInput" placeholder="أدخل كلمة السر" required>
+            <button class="input-group-text" type="button" onclick="togglePass('passwordInput', this)" style="cursor:pointer;">
+              <i class="bi bi-eye-fill"></i>
+            </button>
+          </div>
+        </div>
+
+        <!-- Confirm Password -->
+        <div class="mb-4">
+          <label class="form-label">تأكيد كلمة السر <span style="color:#ef4444;">*</span></label>
+          <div class="input-group">
+            <span class="input-group-text"><i class="bi bi-shield-lock-fill"></i></span>
+            <input type="password" class="form-control" id="confirmPassword" placeholder="أعد إدخال كلمة السر" required>
+            <button class="input-group-text" type="button" onclick="togglePass('confirmPassword', this)" style="cursor:pointer;">
+              <i class="bi bi-eye-fill"></i>
+            </button>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-accent-custom w-100 mb-3">
+          <i class="bi bi-person-check-fill"></i>
+          إنشاء الحساب
+        </button>
+      </form>
+
+      <div class="text-center">
+        <p class="mb-0" style="color: var(--text-secondary);">
+          لديك حساب بالفعل؟
+          <a href="login.html" class="auth-link">تسجيل الدخول</a>
+        </p>
+      </div>
+
+      <div class="text-center mt-3">
+        <a href="index.html" class="auth-link" style="font-size: 0.9rem;">
+          <i class="bi bi-arrow-right"></i> العودة للرئيسية
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    function togglePass(inputId, btn) {
+      const input = document.getElementById(inputId);
+      const icon = btn.querySelector('i');
+      if (input.type === 'password') {
+        input.type = 'text';
+        icon.classList.replace('bi-eye-fill', 'bi-eye-slash-fill');
+      } else {
+        input.type = 'password';
+        icon.classList.replace('bi-eye-slash-fill', 'bi-eye-fill');
+      }
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>مشاهدة الدرس - منصة أ/ أمين خليل</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="dashboard-wrapper">
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <h5><i class="bi bi-mortarboard-fill"></i> منصة أ/ أمين خليل</h5>
+      </div>
+      <ul class="sidebar-nav nav flex-column">
+        <li class="nav-item">
+          <a href="dashboard.html" class="nav-link">
+            <i class="bi bi-grid-fill"></i> الرئيسية
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="my-courses.html" class="nav-link active">
+            <i class="bi bi-book-fill"></i> كورساتي
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="notes.html" class="nav-link">
+            <i class="bi bi-file-earmark-pdf-fill"></i> الملازم والامتحانات
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="subscription.html" class="nav-link">
+            <i class="bi bi-cart-fill"></i> اشتراك جديد
+          </a>
+        </li>
+        <li class="nav-item" style="margin-top: 2rem;">
+          <a href="index.html" class="nav-link">
+            <i class="bi bi-box-arrow-right"></i> تسجيل الخروج
+          </a>
+        </li>
+      </ul>
+    </aside>
+
+    <button class="sidebar-toggle" id="sidebarToggle">
+      <i class="bi bi-list"></i>
+    </button>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Breadcrumb -->
+      <nav aria-label="breadcrumb" class="mb-3">
+        <ol class="breadcrumb" style="background:transparent;padding:0;margin:0;">
+          <li class="breadcrumb-item"><a href="my-courses.html" style="color:var(--color-primary);">كورساتي</a></li>
+          <li class="breadcrumb-item"><a href="#" style="color:var(--color-primary);">النحو — الفصل الأول</a></li>
+          <li class="breadcrumb-item" style="color:var(--text-secondary);">الدرس الثالث</li>
+        </ol>
+      </nav>
+
+      <div class="row g-4">
+        <!-- Video Player Column -->
+        <div class="col-lg-8">
+          <!-- Video Player -->
+          <div class="video-player-wrapper animate-fade-in-up">
+            <div class="d-flex align-items-center justify-content-center h-100" style="background:linear-gradient(135deg,var(--bg-secondary),var(--bg-primary));">
+              <div class="text-center">
+                <i class="bi bi-play-circle-fill" style="font-size:4rem;color:var(--color-primary);opacity:0.7;"></i>
+                <p class="mt-2" style="color:var(--text-secondary);">الفيديو محمي — يتطلب اشتراك نشط</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Lesson Info -->
+          <div class="custom-card animate-fade-in-up animate-delay-1">
+            <h4 style="font-weight:800;" class="mb-2">
+              <i class="bi bi-play-circle-fill" style="color:var(--color-primary);"></i>
+              الدرس الثالث: إعراب الجمل
+            </h4>
+            <p style="color:var(--text-secondary);font-size:0.95rem;" class="mb-3">
+              المادة: النحو — الصف الثالث الثانوي
+            </p>
+            <p style="color:var(--text-secondary);" class="mb-3">
+              في هذا الدرس نتناول إعراب الجمل الاسمية والفعلية وأنواع الخبر والمبتدأ مع أمثلة تطبيقية وتمارين شاملة.
+            </p>
+
+            <!-- Homework Section -->
+            <div style="background:var(--bg-primary);border:1px solid var(--border-color);border-radius:12px;padding:1.25rem;">
+              <h6 style="font-weight:700;color:var(--color-accent);">
+                <i class="bi bi-pencil-square"></i> الواجب المنزلي
+              </h6>
+              <ul style="color:var(--text-secondary);padding-right:1.25rem;" class="mb-0">
+                <li>حل تمارين صفحة 45 إلى 48 من الكتاب المدرسي</li>
+                <li>إعراب خمس جمل من النص الموجود في الملزمة</li>
+                <li>مراجعة قاعدة الخبر المفرد والجملة والشبه جملة</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Lessons List Column -->
+        <div class="col-lg-4">
+          <div class="custom-card animate-fade-in-up animate-delay-2">
+            <h5 style="font-weight:700;" class="mb-3">
+              <i class="bi bi-list-ol" style="color:var(--color-primary);"></i>
+              قائمة الدروس
+            </h5>
+
+            <!-- Completed Lessons -->
+            <div class="lesson-item lesson-completed">
+              <div class="lesson-info">
+                <div class="lesson-number">1</div>
+                <div>
+                  <div class="lesson-title">مقدمة في النحو</div>
+                  <div class="lesson-duration"><i class="bi bi-clock"></i> 25 دقيقة</div>
+                </div>
+              </div>
+              <i class="bi bi-check-circle-fill"></i>
+            </div>
+
+            <div class="lesson-item lesson-completed">
+              <div class="lesson-info">
+                <div class="lesson-number">2</div>
+                <div>
+                  <div class="lesson-title">أقسام الكلام</div>
+                  <div class="lesson-duration"><i class="bi bi-clock"></i> 30 دقيقة</div>
+                </div>
+              </div>
+              <i class="bi bi-check-circle-fill"></i>
+            </div>
+
+            <!-- Current Lesson -->
+            <div class="lesson-item" style="border-color:var(--color-primary);background:rgba(59,130,246,0.08);">
+              <div class="lesson-info">
+                <div class="lesson-number" style="background:var(--color-primary);color:white;">3</div>
+                <div>
+                  <div class="lesson-title" style="color:var(--color-primary);">إعراب الجمل</div>
+                  <div class="lesson-duration"><i class="bi bi-clock"></i> 35 دقيقة</div>
+                </div>
+              </div>
+              <i class="bi bi-play-fill" style="color:var(--color-primary);font-size:1.2rem;"></i>
+            </div>
+
+            <!-- Locked Lessons -->
+            <div class="lesson-item lesson-locked">
+              <div class="lesson-info">
+                <div class="lesson-number">4</div>
+                <div>
+                  <div class="lesson-title">المبتدأ والخبر</div>
+                  <div class="lesson-duration"><i class="bi bi-clock"></i> 28 دقيقة</div>
+                </div>
+              </div>
+              <i class="bi bi-lock-fill"></i>
+            </div>
+
+            <div class="lesson-item lesson-locked">
+              <div class="lesson-info">
+                <div class="lesson-number">5</div>
+                <div>
+                  <div class="lesson-title">كان وأخواتها</div>
+                  <div class="lesson-duration"><i class="bi bi-clock"></i> 32 دقيقة</div>
+                </div>
+              </div>
+              <i class="bi bi-lock-fill"></i>
+            </div>
+
+            <div class="lesson-item lesson-locked">
+              <div class="lesson-info">
+                <div class="lesson-number">6</div>
+                <div>
+                  <div class="lesson-title">إن وأخواتها</div>
+                  <div class="lesson-duration"><i class="bi bi-clock"></i> 30 دقيقة</div>
+                </div>
+              </div>
+              <i class="bi bi-lock-fill"></i>
+            </div>
+
+            <div class="lesson-item lesson-locked">
+              <div class="lesson-info">
+                <div class="lesson-number">7</div>
+                <div>
+                  <div class="lesson-title">الفعل المضارع</div>
+                  <div class="lesson-duration"><i class="bi bi-clock"></i> 27 دقيقة</div>
+                </div>
+              </div>
+              <i class="bi bi-lock-fill"></i>
+            </div>
+
+            <div class="lesson-item lesson-locked">
+              <div class="lesson-info">
+                <div class="lesson-number">8</div>
+                <div>
+                  <div class="lesson-title">مراجعة شاملة</div>
+                  <div class="lesson-duration"><i class="bi bi-clock"></i> 40 دقيقة</div>
+                </div>
+              </div>
+              <i class="bi bi-lock-fill"></i>
+            </div>
+
+            <!-- Exam -->
+            <div class="lesson-item lesson-locked" style="border-color:rgba(234,179,8,0.3);">
+              <div class="lesson-info">
+                <div class="lesson-number" style="background:rgba(234,179,8,0.15);color:#eab308;">
+                  <i class="bi bi-clipboard-data-fill"></i>
+                </div>
+                <div>
+                  <div class="lesson-title">امتحان الوحدة الأولى</div>
+                  <div class="lesson-duration"><i class="bi bi-clock"></i> 45 دقيقة</div>
+                </div>
+              </div>
+              <i class="bi bi-lock-fill"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.getElementById('sidebarToggle').addEventListener('click', function() {
+      document.getElementById('sidebar').classList.toggle('show');
+    });
+  </script>
+</body>
+</html>

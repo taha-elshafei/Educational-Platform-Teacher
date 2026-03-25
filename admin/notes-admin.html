@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>إدارة الملازم - لوحة تحكم المعلم</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <div class="dashboard-wrapper">
+    <aside class="admin-sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <h5><i class="bi bi-shield-lock-fill"></i> لوحة تحكم المعلم</h5>
+        <p style="color:var(--text-secondary);font-size:0.8rem;margin:0.5rem 0 0;">أ/ أمين خليل</p>
+      </div>
+      <ul class="sidebar-nav nav flex-column">
+        <li class="nav-item"><a href="index.html" class="nav-link"><i class="bi bi-speedometer2"></i> الرئيسية</a></li>
+        <li class="nav-item"><a href="courses.html" class="nav-link"><i class="bi bi-book-fill"></i> إدارة الكورسات</a></li>
+        <li class="nav-item"><a href="notes-admin.html" class="nav-link active"><i class="bi bi-file-earmark-pdf-fill"></i> إدارة الملازم</a></li>
+        <li class="nav-item"><a href="students.html" class="nav-link"><i class="bi bi-people-fill"></i> قاعدة بيانات الطلاب</a></li>
+        <li class="nav-item"><a href="analytics.html" class="nav-link"><i class="bi bi-bar-chart-fill"></i> لوحة التحليلات</a></li>
+        <li class="nav-item"><a href="payments.html" class="nav-link"><i class="bi bi-credit-card-fill"></i> نظام الدفع</a></li>
+        <li class="nav-item" style="margin-top:2rem;"><a href="../index.html" class="nav-link"><i class="bi bi-box-arrow-right"></i> تسجيل الخروج</a></li>
+      </ul>
+    </aside>
+
+    <button class="sidebar-toggle" id="sidebarToggle"><i class="bi bi-list"></i></button>
+
+    <main class="admin-main">
+      <h3 style="font-weight:800;margin-bottom:0.25rem;">
+        <i class="bi bi-file-earmark-pdf-fill" style="color:var(--color-primary);"></i> إدارة الملازم
+      </h3>
+      <p style="color:var(--text-secondary);" class="mb-4">رفع وإدارة الملازم والامتحانات PDF</p>
+
+      <!-- Upload Section -->
+      <div class="custom-card mb-4 animate-fade-in-up">
+        <h5 style="font-weight:700;" class="mb-3">
+          <i class="bi bi-cloud-upload-fill" style="color:var(--color-accent);"></i> رفع ملزمة جديدة
+        </h5>
+        <form>
+          <div class="row g-3 mb-3">
+            <div class="col-md-6">
+              <label class="form-label">اسم الملزمة <span style="color:#ef4444;">*</span></label>
+              <input type="text" class="form-control" placeholder="مثال: ملزمة النحو — الوحدة الأولى">
+            </div>
+            <div class="col-md-3">
+              <label class="form-label">الصف الدراسي <span style="color:#ef4444;">*</span></label>
+              <select class="form-select">
+                <option value="" disabled selected>اختر الصف</option>
+                <option value="first">أولى ثانوي</option>
+                <option value="second">ثانية ثانوي</option>
+                <option value="third">ثالثة ثانوي</option>
+              </select>
+            </div>
+            <div class="col-md-3">
+              <label class="form-label">النوع <span style="color:#ef4444;">*</span></label>
+              <select class="form-select">
+                <option value="notes">ملزمة</option>
+                <option value="exam">امتحان</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="upload-area mb-3">
+            <i class="bi bi-cloud-arrow-up-fill d-block"></i>
+            <h6 style="font-weight:700;">اسحب الملف هنا أو اضغط للاختيار</h6>
+            <p style="color:var(--text-secondary);margin:0;font-size:0.85rem;">PDF فقط — الحد الأقصى 50MB</p>
+            <input type="file" accept=".pdf" style="display:none;">
+          </div>
+
+          <button type="submit" class="btn btn-accent-custom">
+            <i class="bi bi-upload"></i> رفع الملزمة
+          </button>
+        </form>
+      </div>
+
+      <!-- Existing Notes List -->
+      <div class="custom-card animate-fade-in-up animate-delay-1">
+        <h5 style="font-weight:700;" class="mb-3">
+          <i class="bi bi-folder-fill" style="color:var(--color-primary);"></i> الملازم المرفوعة
+        </h5>
+
+        <div class="table-custom">
+          <table class="table mb-0">
+            <thead>
+              <tr>
+                <th>اسم الملزمة</th>
+                <th>النوع</th>
+                <th>الصف</th>
+                <th>الحجم</th>
+                <th>تاريخ الرفع</th>
+                <th>إجراء</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><i class="bi bi-file-earmark-pdf-fill" style="color:#ef4444;"></i> ملزمة النحو — الوحدة الأولى</td>
+                <td><span class="course-badge">ملزمة</span></td>
+                <td>ثالثة ثانوي</td>
+                <td>3.2 MB</td>
+                <td>2026/03/01</td>
+                <td>
+                  <div class="d-flex gap-1">
+                    <button class="btn btn-sm btn-outline-custom" style="padding:0.2rem 0.5rem;font-size:0.75rem;"><i class="bi bi-download"></i></button>
+                    <button class="btn btn-sm" style="background:rgba(239,68,68,0.15);color:#ef4444;border:1px solid rgba(239,68,68,0.3);border-radius:8px;padding:0.2rem 0.5rem;font-size:0.75rem;"><i class="bi bi-trash-fill"></i></button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td><i class="bi bi-file-earmark-pdf-fill" style="color:#ef4444;"></i> ملزمة البلاغة — الوحدة الأولى</td>
+                <td><span class="course-badge">ملزمة</span></td>
+                <td>ثالثة ثانوي</td>
+                <td>2.8 MB</td>
+                <td>2026/03/03</td>
+                <td>
+                  <div class="d-flex gap-1">
+                    <button class="btn btn-sm btn-outline-custom" style="padding:0.2rem 0.5rem;font-size:0.75rem;"><i class="bi bi-download"></i></button>
+                    <button class="btn btn-sm" style="background:rgba(239,68,68,0.15);color:#ef4444;border:1px solid rgba(239,68,68,0.3);border-radius:8px;padding:0.2rem 0.5rem;font-size:0.75rem;"><i class="bi bi-trash-fill"></i></button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td><i class="bi bi-file-earmark-pdf-fill" style="color:#eab308;"></i> امتحان النحو — الوحدة الأولى</td>
+                <td><span class="badge-warning">امتحان</span></td>
+                <td>ثالثة ثانوي</td>
+                <td>1.5 MB</td>
+                <td>2026/03/05</td>
+                <td>
+                  <div class="d-flex gap-1">
+                    <button class="btn btn-sm btn-outline-custom" style="padding:0.2rem 0.5rem;font-size:0.75rem;"><i class="bi bi-download"></i></button>
+                    <button class="btn btn-sm" style="background:rgba(239,68,68,0.15);color:#ef4444;border:1px solid rgba(239,68,68,0.3);border-radius:8px;padding:0.2rem 0.5rem;font-size:0.75rem;"><i class="bi bi-trash-fill"></i></button>
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td><i class="bi bi-file-earmark-pdf-fill" style="color:#ef4444;"></i> ملزمة النحو — الصف الثاني</td>
+                <td><span class="course-badge">ملزمة</span></td>
+                <td>ثانية ثانوي</td>
+                <td>2.5 MB</td>
+                <td>2026/03/07</td>
+                <td>
+                  <div class="d-flex gap-1">
+                    <button class="btn btn-sm btn-outline-custom" style="padding:0.2rem 0.5rem;font-size:0.75rem;"><i class="bi bi-download"></i></button>
+                    <button class="btn btn-sm" style="background:rgba(239,68,68,0.15);color:#ef4444;border:1px solid rgba(239,68,68,0.3);border-radius:8px;padding:0.2rem 0.5rem;font-size:0.75rem;"><i class="bi bi-trash-fill"></i></button>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.getElementById('sidebarToggle').addEventListener('click', function() {
+      document.getElementById('sidebar').classList.toggle('show');
+    });
+
+    // Upload area click
+    document.querySelector('.upload-area').addEventListener('click', function() {
+      this.querySelector('input[type=file]').click();
+    });
+  </script>
+</body>
+</html>

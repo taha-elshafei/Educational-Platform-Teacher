@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>دخول المعلم - منصة أ/ أمين خليل</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <div class="auth-container">
+    <div class="glow-effect glow-blue"></div>
+    <div class="glow-effect glow-green"></div>
+
+    <div class="auth-card animate-fade-in-up">
+      <div class="text-center mb-4">
+        <div style="width:70px;height:70px;border-radius:50%;background:linear-gradient(135deg,var(--color-accent),var(--color-accent-hover));display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;font-size:1.8rem;">
+          <i class="bi bi-shield-lock-fill"></i>
+        </div>
+        <h2>دخول لوحة تحكم المعلم</h2>
+        <p class="subtitle">هذه الصفحة مخصصة للمعلم فقط</p>
+      </div>
+
+      <form id="adminLoginForm">
+        <div class="mb-3">
+          <label class="form-label">البريد الإلكتروني</label>
+          <div class="input-group">
+            <span class="input-group-text"><i class="bi bi-envelope-fill"></i></span>
+            <input type="email" class="form-control" placeholder="admin@example.com" required>
+          </div>
+        </div>
+
+        <div class="mb-4">
+          <label class="form-label">كلمة السر</label>
+          <div class="input-group">
+            <span class="input-group-text"><i class="bi bi-lock-fill"></i></span>
+            <input type="password" class="form-control" id="passwordInput" placeholder="أدخل كلمة السر" required>
+            <button class="input-group-text" type="button" id="togglePassword" style="cursor:pointer;">
+              <i class="bi bi-eye-fill"></i>
+            </button>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-accent-custom w-100 mb-3">
+          <i class="bi bi-shield-check"></i>
+          دخول لوحة التحكم
+        </button>
+      </form>
+
+      <div class="text-center mt-3">
+        <a href="../index.html" class="auth-link" style="font-size: 0.9rem;">
+          <i class="bi bi-arrow-right"></i> العودة للرئيسية
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.getElementById('togglePassword').addEventListener('click', function() {
+      const input = document.getElementById('passwordInput');
+      const icon = this.querySelector('i');
+      if (input.type === 'password') {
+        input.type = 'text';
+        icon.classList.replace('bi-eye-fill', 'bi-eye-slash-fill');
+      } else {
+        input.type = 'password';
+        icon.classList.replace('bi-eye-slash-fill', 'bi-eye-fill');
+      }
+    });
+  </script>
+</body>
+</html>

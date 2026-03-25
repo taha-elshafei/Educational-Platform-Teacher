@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>لوحة تحكم المعلم - منصة أ/ أمين خليل</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <div class="dashboard-wrapper">
+    <!-- Admin Sidebar -->
+    <aside class="admin-sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <h5><i class="bi bi-shield-lock-fill"></i> لوحة تحكم المعلم</h5>
+        <p style="color:var(--text-secondary);font-size:0.8rem;margin:0.5rem 0 0;">أ/ أمين خليل</p>
+      </div>
+      <ul class="sidebar-nav nav flex-column">
+        <li class="nav-item">
+          <a href="index.html" class="nav-link active">
+            <i class="bi bi-speedometer2"></i> الرئيسية
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="courses.html" class="nav-link">
+            <i class="bi bi-book-fill"></i> إدارة الكورسات
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="notes-admin.html" class="nav-link">
+            <i class="bi bi-file-earmark-pdf-fill"></i> إدارة الملازم
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="students.html" class="nav-link">
+            <i class="bi bi-people-fill"></i> قاعدة بيانات الطلاب
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="analytics.html" class="nav-link">
+            <i class="bi bi-bar-chart-fill"></i> لوحة التحليلات
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="payments.html" class="nav-link">
+            <i class="bi bi-credit-card-fill"></i> نظام الدفع
+          </a>
+        </li>
+        <li class="nav-item" style="margin-top: 2rem;">
+          <a href="../index.html" class="nav-link">
+            <i class="bi bi-box-arrow-right"></i> تسجيل الخروج
+          </a>
+        </li>
+      </ul>
+    </aside>
+
+    <button class="sidebar-toggle" id="sidebarToggle">
+      <i class="bi bi-list"></i>
+    </button>
+
+    <!-- Admin Main Content -->
+    <main class="admin-main">
+      <!-- Welcome -->
+      <div class="welcome-bar animate-fade-in-up mb-4">
+        <div>
+          <h3>مرحباً أ/ أمين خليل 👋</h3>
+          <p>إليك ملخص أداء المنصة اليوم</p>
+        </div>
+        <div>
+          <span style="opacity:0.8;font-size:0.9rem;"><i class="bi bi-calendar3"></i> الجمعة، 13 مارس 2026</span>
+        </div>
+      </div>
+
+      <!-- Stats Cards -->
+      <div class="row g-3 mb-4">
+        <div class="col-6 col-lg-3 animate-fade-in-up animate-delay-1">
+          <div class="stat-card">
+            <div class="stat-icon" style="background:rgba(59,130,246,0.15);color:var(--color-primary);">
+              <i class="bi bi-people-fill"></i>
+            </div>
+            <div class="stat-number">1,245</div>
+            <div class="stat-label">إجمالي الطلاب</div>
+          </div>
+        </div>
+        <div class="col-6 col-lg-3 animate-fade-in-up animate-delay-2">
+          <div class="stat-card">
+            <div class="stat-icon" style="background:rgba(34,197,94,0.15);color:var(--color-accent);">
+              <i class="bi bi-book-fill"></i>
+            </div>
+            <div class="stat-number">12</div>
+            <div class="stat-label">كورس نشط</div>
+          </div>
+        </div>
+        <div class="col-6 col-lg-3 animate-fade-in-up animate-delay-3">
+          <div class="stat-card">
+            <div class="stat-icon" style="background:rgba(234,179,8,0.15);color:#eab308;">
+              <i class="bi bi-cash-stack"></i>
+            </div>
+            <div class="stat-number">45,300</div>
+            <div class="stat-label">إيرادات الشهر (ج.م)</div>
+          </div>
+        </div>
+        <div class="col-6 col-lg-3 animate-fade-in-up animate-delay-4">
+          <div class="stat-card">
+            <div class="stat-icon" style="background:rgba(239,68,68,0.15);color:#ef4444;">
+              <i class="bi bi-bell-fill"></i>
+            </div>
+            <div class="stat-number">8</div>
+            <div class="stat-label">طلب اشتراك جديد</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Recent Subscription Requests -->
+      <div class="custom-card mb-4 animate-fade-in-up">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <h5 style="font-weight:700;margin:0;">
+            <i class="bi bi-bell-fill" style="color:#eab308;"></i> طلبات الاشتراك الجديدة
+          </h5>
+          <span class="badge-warning">8 طلبات</span>
+        </div>
+
+        <div class="table-custom">
+          <table class="table mb-0">
+            <thead>
+              <tr>
+                <th>اسم الطالب</th>
+                <th>الكورس</th>
+                <th>الصف</th>
+                <th>المحافظة</th>
+                <th>الحالة</th>
+                <th>إجراء</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>أحمد محمد علي</td>
+                <td>النحو — الفصل الأول</td>
+                <td>ثالثة ثانوي</td>
+                <td>القاهرة</td>
+                <td><span class="badge-warning">في الانتظار</span></td>
+                <td>
+                  <button class="btn btn-sm btn-accent-custom" style="padding:0.3rem 0.75rem;font-size:0.8rem;">
+                    <i class="bi bi-check-lg"></i> قبول
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>فاطمة أحمد حسن</td>
+                <td>البلاغة — الفصل الأول</td>
+                <td>ثالثة ثانوي</td>
+                <td>الجيزة</td>
+                <td><span class="badge-warning">في الانتظار</span></td>
+                <td>
+                  <button class="btn btn-sm btn-accent-custom" style="padding:0.3rem 0.75rem;font-size:0.8rem;">
+                    <i class="bi bi-check-lg"></i> قبول
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>محمد خالد سعيد</td>
+                <td>النحو — الفصل الأول</td>
+                <td>ثانية ثانوي</td>
+                <td>الإسكندرية</td>
+                <td><span class="badge-warning">في الانتظار</span></td>
+                <td>
+                  <button class="btn btn-sm btn-accent-custom" style="padding:0.3rem 0.75rem;font-size:0.8rem;">
+                    <i class="bi bi-check-lg"></i> قبول
+                  </button>
+                </td>
+              </tr>
+              <tr>
+                <td>نور الدين عبدالله</td>
+                <td>الأدب والنصوص</td>
+                <td>ثالثة ثانوي</td>
+                <td>الدقهلية</td>
+                <td><span class="badge-success">تم القبول</span></td>
+                <td>
+                  <button class="btn btn-sm btn-primary-custom" style="padding:0.3rem 0.75rem;font-size:0.8rem;">
+                    <i class="bi bi-receipt"></i> فاتورة
+                  </button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Quick Actions -->
+      <div class="row g-3">
+        <div class="col-md-4 animate-fade-in-up animate-delay-1">
+          <a href="courses.html" class="custom-card d-block text-center" style="cursor:pointer;">
+            <i class="bi bi-plus-circle-fill" style="font-size:2rem;color:var(--color-primary);"></i>
+            <h6 style="font-weight:700;margin-top:0.75rem;">إنشاء كورس جديد</h6>
+            <p style="color:var(--text-secondary);font-size:0.85rem;margin:0;">إضافة كورس مع الدروس والفيديوهات</p>
+          </a>
+        </div>
+        <div class="col-md-4 animate-fade-in-up animate-delay-2">
+          <a href="notes-admin.html" class="custom-card d-block text-center" style="cursor:pointer;">
+            <i class="bi bi-cloud-upload-fill" style="font-size:2rem;color:var(--color-accent);"></i>
+            <h6 style="font-weight:700;margin-top:0.75rem;">رفع ملزمة جديدة</h6>
+            <p style="color:var(--text-secondary);font-size:0.85rem;margin:0;">رفع ملزمة PDF وتحديد الصف</p>
+          </a>
+        </div>
+        <div class="col-md-4 animate-fade-in-up animate-delay-3">
+          <a href="students.html" class="custom-card d-block text-center" style="cursor:pointer;">
+            <i class="bi bi-file-earmark-excel-fill" style="font-size:2rem;color:#eab308;"></i>
+            <h6 style="font-weight:700;margin-top:0.75rem;">تصدير بيانات الطلاب</h6>
+            <p style="color:var(--text-secondary);font-size:0.85rem;margin:0;">تصدير قاعدة البيانات إلى Excel</p>
+          </a>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.getElementById('sidebarToggle').addEventListener('click', function() {
+      document.getElementById('sidebar').classList.toggle('show');
+    });
+  </script>
+</body>
+</html>

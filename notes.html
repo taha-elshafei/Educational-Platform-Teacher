@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>الملازم والامتحانات - منصة أ/ أمين خليل</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="dashboard-wrapper">
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <h5><i class="bi bi-mortarboard-fill"></i> منصة أ/ أمين خليل</h5>
+      </div>
+      <ul class="sidebar-nav nav flex-column">
+        <li class="nav-item">
+          <a href="dashboard.html" class="nav-link">
+            <i class="bi bi-grid-fill"></i> الرئيسية
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="my-courses.html" class="nav-link">
+            <i class="bi bi-book-fill"></i> كورساتي
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="notes.html" class="nav-link active">
+            <i class="bi bi-file-earmark-pdf-fill"></i> الملازم والامتحانات
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="subscription.html" class="nav-link">
+            <i class="bi bi-cart-fill"></i> اشتراك جديد
+          </a>
+        </li>
+        <li class="nav-item" style="margin-top: 2rem;">
+          <a href="index.html" class="nav-link">
+            <i class="bi bi-box-arrow-right"></i> تسجيل الخروج
+          </a>
+        </li>
+      </ul>
+    </aside>
+
+    <button class="sidebar-toggle" id="sidebarToggle">
+      <i class="bi bi-list"></i>
+    </button>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <h3 class="mb-1" style="font-weight:800;">
+        <i class="bi bi-file-earmark-pdf-fill" style="color:var(--color-primary);"></i> الملازم والامتحانات
+      </h3>
+      <p style="color:var(--text-secondary);" class="mb-4">جميع الملازم والامتحانات حسب الصف الدراسي</p>
+
+      <!-- Grade Tabs -->
+      <ul class="nav nav-tabs-custom nav-tabs mb-4" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#grade3" type="button">الصف الثالث الثانوي</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" data-bs-toggle="tab" data-bs-target="#grade2" type="button">الصف الثاني الثانوي</button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" data-bs-toggle="tab" data-bs-target="#grade1" type="button">الصف الأول الثانوي</button>
+        </li>
+      </ul>
+
+      <div class="tab-content">
+        <!-- Grade 3 -->
+        <div class="tab-pane fade show active" id="grade3">
+          <h5 style="font-weight:700;" class="mb-3">
+            <i class="bi bi-journal-bookmark-fill" style="color:var(--color-accent);"></i>
+            الملازم — الصف الثالث الثانوي
+          </h5>
+          <div class="row g-4 mb-5">
+            <div class="col-md-6 col-lg-4 animate-fade-in-up">
+              <div class="note-card">
+                <div class="icon-wrapper">
+                  <i class="bi bi-file-earmark-pdf-fill"></i>
+                </div>
+                <h5>ملزمة النحو</h5>
+                <p>الفصل الدراسي الأول — 45 صفحة</p>
+                <a href="#" class="btn btn-primary-custom btn-sm w-100">
+                  <i class="bi bi-download"></i> تحميل PDF
+                </a>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 animate-fade-in-up animate-delay-1">
+              <div class="note-card">
+                <div class="icon-wrapper" style="background:rgba(34,197,94,0.15);color:var(--color-accent);">
+                  <i class="bi bi-file-earmark-pdf-fill"></i>
+                </div>
+                <h5>ملزمة البلاغة</h5>
+                <p>الفصل الدراسي الأول — 30 صفحة</p>
+                <a href="#" class="btn btn-primary-custom btn-sm w-100">
+                  <i class="bi bi-download"></i> تحميل PDF
+                </a>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 animate-fade-in-up animate-delay-2">
+              <div class="note-card">
+                <div class="icon-wrapper" style="background:rgba(168,85,247,0.15);color:#a855f7;">
+                  <i class="bi bi-file-earmark-pdf-fill"></i>
+                </div>
+                <h5>ملزمة الأدب والنصوص</h5>
+                <p>الفصل الدراسي الأول — 55 صفحة</p>
+                <a href="#" class="btn btn-primary-custom btn-sm w-100">
+                  <i class="bi bi-download"></i> تحميل PDF
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <h5 style="font-weight:700;" class="mb-3">
+            <i class="bi bi-clipboard-data-fill" style="color:#eab308;"></i>
+            الامتحانات — الصف الثالث الثانوي
+          </h5>
+          <div class="row g-4">
+            <div class="col-md-6 col-lg-4 animate-fade-in-up">
+              <div class="note-card">
+                <div class="icon-wrapper" style="background:rgba(234,179,8,0.15);color:#eab308;">
+                  <i class="bi bi-clipboard-data-fill"></i>
+                </div>
+                <h5>امتحان النحو — الوحدة الأولى</h5>
+                <p>20 سؤال — 45 دقيقة</p>
+                <a href="#" class="btn btn-accent-custom btn-sm w-100">
+                  <i class="bi bi-pencil-square"></i> بدء الامتحان
+                </a>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 animate-fade-in-up animate-delay-1">
+              <div class="note-card">
+                <div class="icon-wrapper" style="background:rgba(234,179,8,0.15);color:#eab308;">
+                  <i class="bi bi-clipboard-data-fill"></i>
+                </div>
+                <h5>امتحان البلاغة — الوحدة الأولى</h5>
+                <p>15 سؤال — 30 دقيقة</p>
+                <a href="#" class="btn btn-accent-custom btn-sm w-100">
+                  <i class="bi bi-pencil-square"></i> بدء الامتحان
+                </a>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4 animate-fade-in-up animate-delay-2">
+              <div class="note-card">
+                <div class="icon-wrapper" style="background:rgba(34,197,94,0.15);color:var(--color-accent);">
+                  <i class="bi bi-clipboard-check-fill"></i>
+                </div>
+                <h5>امتحان الأدب — الوحدة الأولى</h5>
+                <p>مكتمل — النتيجة: 92%</p>
+                <a href="#" class="btn btn-outline-custom btn-sm w-100">
+                  <i class="bi bi-eye-fill"></i> عرض النتيجة
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Grade 2 -->
+        <div class="tab-pane fade" id="grade2">
+          <h5 style="font-weight:700;" class="mb-3">
+            <i class="bi bi-journal-bookmark-fill" style="color:var(--color-accent);"></i>
+            الملازم — الصف الثاني الثانوي
+          </h5>
+          <div class="row g-4 mb-5">
+            <div class="col-md-6 col-lg-4">
+              <div class="note-card">
+                <div class="icon-wrapper">
+                  <i class="bi bi-file-earmark-pdf-fill"></i>
+                </div>
+                <h5>ملزمة النحو</h5>
+                <p>الفصل الدراسي الأول — 40 صفحة</p>
+                <a href="#" class="btn btn-primary-custom btn-sm w-100">
+                  <i class="bi bi-download"></i> تحميل PDF
+                </a>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <div class="note-card">
+                <div class="icon-wrapper" style="background:rgba(34,197,94,0.15);color:var(--color-accent);">
+                  <i class="bi bi-file-earmark-pdf-fill"></i>
+                </div>
+                <h5>ملزمة القراءة</h5>
+                <p>الفصل الدراسي الأول — 35 صفحة</p>
+                <a href="#" class="btn btn-primary-custom btn-sm w-100">
+                  <i class="bi bi-download"></i> تحميل PDF
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <h5 style="font-weight:700;" class="mb-3">
+            <i class="bi bi-clipboard-data-fill" style="color:#eab308;"></i>
+            الامتحانات — الصف الثاني الثانوي
+          </h5>
+          <div class="row g-4">
+            <div class="col-md-6 col-lg-4">
+              <div class="note-card">
+                <div class="icon-wrapper" style="background:rgba(234,179,8,0.15);color:#eab308;">
+                  <i class="bi bi-clipboard-data-fill"></i>
+                </div>
+                <h5>امتحان النحو — الوحدة الأولى</h5>
+                <p>18 سؤال — 40 دقيقة</p>
+                <a href="#" class="btn btn-accent-custom btn-sm w-100">
+                  <i class="bi bi-pencil-square"></i> بدء الامتحان
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Grade 1 -->
+        <div class="tab-pane fade" id="grade1">
+          <h5 style="font-weight:700;" class="mb-3">
+            <i class="bi bi-journal-bookmark-fill" style="color:var(--color-accent);"></i>
+            الملازم — الصف الأول الثانوي
+          </h5>
+          <div class="row g-4 mb-5">
+            <div class="col-md-6 col-lg-4">
+              <div class="note-card">
+                <div class="icon-wrapper">
+                  <i class="bi bi-file-earmark-pdf-fill"></i>
+                </div>
+                <h5>ملزمة النحو</h5>
+                <p>الفصل الدراسي الأول — 38 صفحة</p>
+                <a href="#" class="btn btn-primary-custom btn-sm w-100">
+                  <i class="bi bi-download"></i> تحميل PDF
+                </a>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <div class="note-card">
+                <div class="icon-wrapper" style="background:rgba(168,85,247,0.15);color:#a855f7;">
+                  <i class="bi bi-file-earmark-pdf-fill"></i>
+                </div>
+                <h5>ملزمة الأدب</h5>
+                <p>الفصل الدراسي الأول — 42 صفحة</p>
+                <a href="#" class="btn btn-primary-custom btn-sm w-100">
+                  <i class="bi bi-download"></i> تحميل PDF
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <h5 style="font-weight:700;" class="mb-3">
+            <i class="bi bi-clipboard-data-fill" style="color:#eab308;"></i>
+            الامتحانات — الصف الأول الثانوي
+          </h5>
+          <div class="row g-4">
+            <div class="col-md-6 col-lg-4">
+              <div class="note-card">
+                <div class="icon-wrapper" style="background:rgba(234,179,8,0.15);color:#eab308;">
+                  <i class="bi bi-clipboard-data-fill"></i>
+                </div>
+                <h5>امتحان النحو — الوحدة الأولى</h5>
+                <p>15 سؤال — 35 دقيقة</p>
+                <a href="#" class="btn btn-accent-custom btn-sm w-100">
+                  <i class="bi bi-pencil-square"></i> بدء الامتحان
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.getElementById('sidebarToggle').addEventListener('click', function() {
+      document.getElementById('sidebar').classList.toggle('show');
+    });
+  </script>
+</body>
+</html>

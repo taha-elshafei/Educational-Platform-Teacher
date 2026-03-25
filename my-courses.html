@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>كورساتي - منصة أ/ أمين خليل</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="dashboard-wrapper">
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <h5><i class="bi bi-mortarboard-fill"></i> منصة أ/ أمين خليل</h5>
+      </div>
+      <ul class="sidebar-nav nav flex-column">
+        <li class="nav-item">
+          <a href="dashboard.html" class="nav-link">
+            <i class="bi bi-grid-fill"></i> الرئيسية
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="my-courses.html" class="nav-link active">
+            <i class="bi bi-book-fill"></i> كورساتي
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="notes.html" class="nav-link">
+            <i class="bi bi-file-earmark-pdf-fill"></i> الملازم والامتحانات
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="subscription.html" class="nav-link">
+            <i class="bi bi-cart-fill"></i> اشتراك جديد
+          </a>
+        </li>
+        <li class="nav-item" style="margin-top: 2rem;">
+          <a href="index.html" class="nav-link">
+            <i class="bi bi-box-arrow-right"></i> تسجيل الخروج
+          </a>
+        </li>
+      </ul>
+    </aside>
+
+    <button class="sidebar-toggle" id="sidebarToggle">
+      <i class="bi bi-list"></i>
+    </button>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <h3 class="mb-1" style="font-weight:800;">
+        <i class="bi bi-book-fill" style="color:var(--color-primary);"></i> كورساتي
+      </h3>
+      <p style="color:var(--text-secondary);" class="mb-4">الكورسات المشترك بها</p>
+
+      <!-- Course 1 -->
+      <div class="custom-card mb-4 animate-fade-in-up">
+        <div class="row align-items-center g-3">
+          <div class="col-md-3">
+            <div class="course-card-img d-flex align-items-center justify-content-center" style="height:140px;border-radius:12px;">
+              <i class="bi bi-book-half" style="font-size:2.5rem;color:rgba(255,255,255,0.6);"></i>
+            </div>
+          </div>
+          <div class="col-md-9">
+            <div class="d-flex justify-content-between align-items-start mb-2">
+              <div>
+                <span class="course-badge mb-2 d-inline-block">الصف الثالث</span>
+                <h5 style="font-weight:700;">النحو — الفصل الأول</h5>
+              </div>
+              <span class="badge-success">مشترك</span>
+            </div>
+            <p style="color:var(--text-secondary);font-size:0.9rem;" class="mb-2">شرح مفصل لقواعد النحو للفصل الدراسي الأول</p>
+
+            <!-- Progress -->
+            <div class="d-flex align-items-center gap-3 mb-3">
+              <div class="progress-custom flex-grow-1">
+                <div class="progress-bar" style="width: 65%;" role="progressbar"></div>
+              </div>
+              <span style="font-weight:700;color:var(--color-primary);font-size:0.9rem;">65%</span>
+            </div>
+
+            <div class="d-flex gap-2 flex-wrap">
+              <a href="course-viewer.html" class="btn btn-primary-custom btn-sm">
+                <i class="bi bi-play-fill"></i> متابعة الدروس
+              </a>
+              <span class="d-flex align-items-center gap-1" style="color:var(--text-secondary);font-size:0.85rem;">
+                <i class="bi bi-collection-play-fill"></i> 8 / 12 درس
+              </span>
+              <span class="d-flex align-items-center gap-1" style="color:var(--text-secondary);font-size:0.85rem;">
+                <i class="bi bi-clipboard-check-fill"></i> 2 امتحان
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Course 2 -->
+      <div class="custom-card mb-4 animate-fade-in-up animate-delay-1">
+        <div class="row align-items-center g-3">
+          <div class="col-md-3">
+            <div class="course-card-img d-flex align-items-center justify-content-center" style="height:140px;border-radius:12px;background:linear-gradient(135deg,#22c55e,#16a34a);">
+              <i class="bi bi-pen-fill" style="font-size:2.5rem;color:rgba(255,255,255,0.6);"></i>
+            </div>
+          </div>
+          <div class="col-md-9">
+            <div class="d-flex justify-content-between align-items-start mb-2">
+              <div>
+                <span class="course-badge mb-2 d-inline-block">الصف الثالث</span>
+                <h5 style="font-weight:700;">البلاغة — الفصل الأول</h5>
+              </div>
+              <span class="badge-success">مشترك</span>
+            </div>
+            <p style="color:var(--text-secondary);font-size:0.9rem;" class="mb-2">دروس البلاغة كاملة مع تمارين وأمثلة تطبيقية</p>
+
+            <div class="d-flex align-items-center gap-3 mb-3">
+              <div class="progress-custom flex-grow-1">
+                <div class="progress-bar" style="width: 30%;" role="progressbar"></div>
+              </div>
+              <span style="font-weight:700;color:var(--color-primary);font-size:0.9rem;">30%</span>
+            </div>
+
+            <div class="d-flex gap-2 flex-wrap">
+              <a href="course-viewer.html" class="btn btn-primary-custom btn-sm">
+                <i class="bi bi-play-fill"></i> متابعة الدروس
+              </a>
+              <span class="d-flex align-items-center gap-1" style="color:var(--text-secondary);font-size:0.85rem;">
+                <i class="bi bi-collection-play-fill"></i> 3 / 10 درس
+              </span>
+              <span class="d-flex align-items-center gap-1" style="color:var(--text-secondary);font-size:0.85rem;">
+                <i class="bi bi-clipboard-check-fill"></i> 1 امتحان
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Course 3 - Completed -->
+      <div class="custom-card mb-4 animate-fade-in-up animate-delay-2">
+        <div class="row align-items-center g-3">
+          <div class="col-md-3">
+            <div class="course-card-img d-flex align-items-center justify-content-center" style="height:140px;border-radius:12px;background:linear-gradient(135deg,#a855f7,#7c3aed);">
+              <i class="bi bi-journal-text" style="font-size:2.5rem;color:rgba(255,255,255,0.6);"></i>
+            </div>
+          </div>
+          <div class="col-md-9">
+            <div class="d-flex justify-content-between align-items-start mb-2">
+              <div>
+                <span class="course-badge mb-2 d-inline-block">الصف الثالث</span>
+                <h5 style="font-weight:700;">الأدب والنصوص — الفصل الأول</h5>
+              </div>
+              <span class="badge-success">مكتمل <i class="bi bi-check-lg"></i></span>
+            </div>
+            <p style="color:var(--text-secondary);font-size:0.9rem;" class="mb-2">شرح الأدب والنصوص مع التحليل والمناقشة</p>
+
+            <div class="d-flex align-items-center gap-3 mb-3">
+              <div class="progress-custom flex-grow-1">
+                <div class="progress-bar" style="width: 100%;" role="progressbar"></div>
+              </div>
+              <span style="font-weight:700;color:var(--color-accent);font-size:0.9rem;">100%</span>
+            </div>
+
+            <div class="d-flex gap-2 flex-wrap">
+              <a href="course-viewer.html" class="btn btn-outline-custom btn-sm">
+                <i class="bi bi-arrow-repeat"></i> مراجعة الدروس
+              </a>
+              <span class="d-flex align-items-center gap-1" style="color:var(--text-secondary);font-size:0.85rem;">
+                <i class="bi bi-collection-play-fill"></i> 10 / 10 درس
+              </span>
+              <span class="d-flex align-items-center gap-1" style="color:var(--text-secondary);font-size:0.85rem;">
+                <i class="bi bi-clipboard-check-fill"></i> 3 امتحان — النتيجة: 92%
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.getElementById('sidebarToggle').addEventListener('click', function() {
+      document.getElementById('sidebar').classList.toggle('show');
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>إدارة الكورسات - لوحة تحكم المعلم</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <div class="dashboard-wrapper">
+    <!-- Admin Sidebar -->
+    <aside class="admin-sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <h5><i class="bi bi-shield-lock-fill"></i> لوحة تحكم المعلم</h5>
+        <p style="color:var(--text-secondary);font-size:0.8rem;margin:0.5rem 0 0;">أ/ أمين خليل</p>
+      </div>
+      <ul class="sidebar-nav nav flex-column">
+        <li class="nav-item"><a href="index.html" class="nav-link"><i class="bi bi-speedometer2"></i> الرئيسية</a></li>
+        <li class="nav-item"><a href="courses.html" class="nav-link active"><i class="bi bi-book-fill"></i> إدارة الكورسات</a></li>
+        <li class="nav-item"><a href="notes-admin.html" class="nav-link"><i class="bi bi-file-earmark-pdf-fill"></i> إدارة الملازم</a></li>
+        <li class="nav-item"><a href="students.html" class="nav-link"><i class="bi bi-people-fill"></i> قاعدة بيانات الطلاب</a></li>
+        <li class="nav-item"><a href="analytics.html" class="nav-link"><i class="bi bi-bar-chart-fill"></i> لوحة التحليلات</a></li>
+        <li class="nav-item"><a href="payments.html" class="nav-link"><i class="bi bi-credit-card-fill"></i> نظام الدفع</a></li>
+        <li class="nav-item" style="margin-top:2rem;"><a href="../index.html" class="nav-link"><i class="bi bi-box-arrow-right"></i> تسجيل الخروج</a></li>
+      </ul>
+    </aside>
+
+    <button class="sidebar-toggle" id="sidebarToggle"><i class="bi bi-list"></i></button>
+
+    <main class="admin-main">
+      <div class="d-flex justify-content-between align-items-center mb-4">
+        <div>
+          <h3 style="font-weight:800;margin:0;">
+            <i class="bi bi-book-fill" style="color:var(--color-primary);"></i> إدارة الكورسات
+          </h3>
+          <p style="color:var(--text-secondary);margin:0;">إنشاء وإدارة الكورسات والدروس</p>
+        </div>
+        <button class="btn btn-accent-custom" data-bs-toggle="modal" data-bs-target="#createCourseModal">
+          <i class="bi bi-plus-circle-fill"></i> إنشاء كورس جديد
+        </button>
+      </div>
+
+      <!-- Existing Courses -->
+      <div class="row g-4">
+        <!-- Course 1 -->
+        <div class="col-md-6 col-lg-4 animate-fade-in-up">
+          <div class="course-card">
+            <div class="course-card-img d-flex align-items-center justify-content-center">
+              <i class="bi bi-book-half" style="font-size:3rem;color:rgba(255,255,255,0.6);"></i>
+            </div>
+            <div class="course-card-body">
+              <div class="d-flex justify-content-between align-items-start mb-2">
+                <span class="course-badge">الصف الثالث</span>
+                <span class="course-price">150 ج.م</span>
+              </div>
+              <h5>النحو — الفصل الأول</h5>
+              <p>شرح مفصل لقواعد النحو</p>
+              <div class="d-flex align-items-center gap-2 mb-3" style="font-size:0.85rem;color:var(--text-secondary);">
+                <span><i class="bi bi-collection-play-fill"></i> 12 درس</span>
+                <span><i class="bi bi-people-fill"></i> 340 طالب</span>
+              </div>
+              <div class="d-flex gap-2">
+                <button class="btn btn-primary-custom btn-sm flex-grow-1">
+                  <i class="bi bi-pencil-fill"></i> تعديل
+                </button>
+                <button class="btn btn-sm" style="background:rgba(239,68,68,0.15);color:#ef4444;border:1px solid rgba(239,68,68,0.3);border-radius:10px;">
+                  <i class="bi bi-trash-fill"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Course 2 -->
+        <div class="col-md-6 col-lg-4 animate-fade-in-up animate-delay-1">
+          <div class="course-card">
+            <div class="course-card-img d-flex align-items-center justify-content-center" style="background:linear-gradient(135deg,#22c55e,#16a34a);">
+              <i class="bi bi-pen-fill" style="font-size:3rem;color:rgba(255,255,255,0.6);"></i>
+            </div>
+            <div class="course-card-body">
+              <div class="d-flex justify-content-between align-items-start mb-2">
+                <span class="course-badge">الصف الثالث</span>
+                <span class="course-price">200 ج.م</span>
+              </div>
+              <h5>البلاغة — الفصل الأول</h5>
+              <p>دروس البلاغة مع تمارين تطبيقية</p>
+              <div class="d-flex align-items-center gap-2 mb-3" style="font-size:0.85rem;color:var(--text-secondary);">
+                <span><i class="bi bi-collection-play-fill"></i> 10 درس</span>
+                <span><i class="bi bi-people-fill"></i> 280 طالب</span>
+              </div>
+              <div class="d-flex gap-2">
+                <button class="btn btn-primary-custom btn-sm flex-grow-1">
+                  <i class="bi bi-pencil-fill"></i> تعديل
+                </button>
+                <button class="btn btn-sm" style="background:rgba(239,68,68,0.15);color:#ef4444;border:1px solid rgba(239,68,68,0.3);border-radius:10px;">
+                  <i class="bi bi-trash-fill"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Course 3 -->
+        <div class="col-md-6 col-lg-4 animate-fade-in-up animate-delay-2">
+          <div class="course-card">
+            <div class="course-card-img d-flex align-items-center justify-content-center" style="background:linear-gradient(135deg,#a855f7,#7c3aed);">
+              <i class="bi bi-journal-text" style="font-size:3rem;color:rgba(255,255,255,0.6);"></i>
+            </div>
+            <div class="course-card-body">
+              <div class="d-flex justify-content-between align-items-start mb-2">
+                <span class="course-badge">الصف الثالث</span>
+                <span class="course-price">180 ج.م</span>
+              </div>
+              <h5>الأدب والنصوص — الفصل الأول</h5>
+              <p>شرح الأدب والنصوص مع التحليل</p>
+              <div class="d-flex align-items-center gap-2 mb-3" style="font-size:0.85rem;color:var(--text-secondary);">
+                <span><i class="bi bi-collection-play-fill"></i> 10 درس</span>
+                <span><i class="bi bi-people-fill"></i> 195 طالب</span>
+              </div>
+              <div class="d-flex gap-2">
+                <button class="btn btn-primary-custom btn-sm flex-grow-1">
+                  <i class="bi bi-pencil-fill"></i> تعديل
+                </button>
+                <button class="btn btn-sm" style="background:rgba(239,68,68,0.15);color:#ef4444;border:1px solid rgba(239,68,68,0.3);border-radius:10px;">
+                  <i class="bi bi-trash-fill"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Course 4 -->
+        <div class="col-md-6 col-lg-4 animate-fade-in-up animate-delay-3">
+          <div class="course-card">
+            <div class="course-card-img d-flex align-items-center justify-content-center" style="background:linear-gradient(135deg,#f59e0b,#d97706);">
+              <i class="bi bi-book-half" style="font-size:3rem;color:rgba(255,255,255,0.6);"></i>
+            </div>
+            <div class="course-card-body">
+              <div class="d-flex justify-content-between align-items-start mb-2">
+                <span class="course-badge">الصف الثاني</span>
+                <span class="course-price">120 ج.م</span>
+              </div>
+              <h5>النحو — الصف الثاني</h5>
+              <p>قواعد النحو للصف الثاني الثانوي</p>
+              <div class="d-flex align-items-center gap-2 mb-3" style="font-size:0.85rem;color:var(--text-secondary);">
+                <span><i class="bi bi-collection-play-fill"></i> 8 درس</span>
+                <span><i class="bi bi-people-fill"></i> 156 طالب</span>
+              </div>
+              <div class="d-flex gap-2">
+                <button class="btn btn-primary-custom btn-sm flex-grow-1">
+                  <i class="bi bi-pencil-fill"></i> تعديل
+                </button>
+                <button class="btn btn-sm" style="background:rgba(239,68,68,0.15);color:#ef4444;border:1px solid rgba(239,68,68,0.3);border-radius:10px;">
+                  <i class="bi bi-trash-fill"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Create Course Modal -->
+      <div class="modal fade" id="createCourseModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content" style="background:var(--bg-secondary);border:1px solid var(--border-color);border-radius:20px;">
+            <div class="modal-header" style="border-bottom:1px solid var(--border-color);padding:1.5rem;">
+              <h5 class="modal-title" style="font-weight:800;">
+                <i class="bi bi-plus-circle-fill" style="color:var(--color-accent);"></i> إنشاء كورس جديد
+              </h5>
+              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body" style="padding:1.5rem;">
+              <form>
+                <div class="mb-3">
+                  <label class="form-label">اسم الكورس <span style="color:#ef4444;">*</span></label>
+                  <input type="text" class="form-control" placeholder="مثال: النحو — الفصل الأول">
+                </div>
+                <div class="mb-3">
+                  <label class="form-label">وصف الكورس <span style="color:#ef4444;">*</span></label>
+                  <textarea class="form-control" rows="3" placeholder="أدخل وصف مختصر للكورس" style="background-color:var(--bg-primary)!important;border:1px solid var(--border-color)!important;color:var(--text-primary)!important;border-radius:10px!important;"></textarea>
+                </div>
+                <div class="row g-3">
+                  <div class="col-6">
+                    <label class="form-label">السعر (ج.م) <span style="color:#ef4444;">*</span></label>
+                    <input type="number" class="form-control" placeholder="150">
+                  </div>
+                  <div class="col-6">
+                    <label class="form-label">الصف الدراسي <span style="color:#ef4444;">*</span></label>
+                    <select class="form-select">
+                      <option value="" disabled selected>اختر الصف</option>
+                      <option value="first">أولى ثانوي</option>
+                      <option value="second">ثانية ثانوي</option>
+                      <option value="third">ثالثة ثانوي</option>
+                    </select>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="modal-footer" style="border-top:1px solid var(--border-color);padding:1.5rem;">
+              <button type="button" class="btn btn-outline-custom" data-bs-dismiss="modal">إلغاء</button>
+              <button type="button" class="btn btn-accent-custom">
+                <i class="bi bi-check-circle-fill"></i> إنشاء الكورس
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Manage Lessons Section -->
+      <div class="custom-card mt-4 animate-fade-in-up">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+          <h5 style="font-weight:700;margin:0;">
+            <i class="bi bi-collection-play-fill" style="color:var(--color-primary);"></i> إدارة الدروس — النحو — الفصل الأول
+          </h5>
+          <button class="btn btn-primary-custom btn-sm">
+            <i class="bi bi-plus-lg"></i> إضافة درس
+          </button>
+        </div>
+
+        <div class="lesson-item">
+          <div class="lesson-info">
+            <div class="lesson-number">1</div>
+            <div>
+              <div class="lesson-title">مقدمة في النحو</div>
+              <div class="lesson-duration"><i class="bi bi-clock"></i> 25 دقيقة — <i class="bi bi-camera-video-fill"></i> فيديو مرفوع</div>
+            </div>
+          </div>
+          <div class="d-flex gap-2">
+            <button class="btn btn-sm btn-outline-custom" style="padding:0.3rem 0.6rem;font-size:0.8rem;">
+              <i class="bi bi-pencil-fill"></i>
+            </button>
+            <button class="btn btn-sm" style="background:rgba(239,68,68,0.15);color:#ef4444;border:1px solid rgba(239,68,68,0.3);border-radius:8px;padding:0.3rem 0.6rem;font-size:0.8rem;">
+              <i class="bi bi-trash-fill"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="lesson-item">
+          <div class="lesson-info">
+            <div class="lesson-number">2</div>
+            <div>
+              <div class="lesson-title">أقسام الكلام</div>
+              <div class="lesson-duration"><i class="bi bi-clock"></i> 30 دقيقة — <i class="bi bi-camera-video-fill"></i> فيديو مرفوع</div>
+            </div>
+          </div>
+          <div class="d-flex gap-2">
+            <button class="btn btn-sm btn-outline-custom" style="padding:0.3rem 0.6rem;font-size:0.8rem;">
+              <i class="bi bi-pencil-fill"></i>
+            </button>
+            <button class="btn btn-sm" style="background:rgba(239,68,68,0.15);color:#ef4444;border:1px solid rgba(239,68,68,0.3);border-radius:8px;padding:0.3rem 0.6rem;font-size:0.8rem;">
+              <i class="bi bi-trash-fill"></i>
+            </button>
+          </div>
+        </div>
+
+        <div class="lesson-item">
+          <div class="lesson-info">
+            <div class="lesson-number">3</div>
+            <div>
+              <div class="lesson-title">إعراب الجمل</div>
+              <div class="lesson-duration"><i class="bi bi-clock"></i> 35 دقيقة — <i class="bi bi-cloud-upload-fill" style="color:#eab308;"></i> في انتظار الرفع</div>
+            </div>
+          </div>
+          <div class="d-flex gap-2">
+            <button class="btn btn-sm btn-accent-custom" style="padding:0.3rem 0.6rem;font-size:0.8rem;">
+              <i class="bi bi-cloud-upload-fill"></i> رفع فيديو
+            </button>
+            <button class="btn btn-sm" style="background:rgba(239,68,68,0.15);color:#ef4444;border:1px solid rgba(239,68,68,0.3);border-radius:8px;padding:0.3rem 0.6rem;font-size:0.8rem;">
+              <i class="bi bi-trash-fill"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.getElementById('sidebarToggle').addEventListener('click', function() {
+      document.getElementById('sidebar').classList.toggle('show');
+    });
+  </script>
+</body>
+</html>

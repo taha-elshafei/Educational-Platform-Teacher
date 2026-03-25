@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>لوحة التحكم - منصة أ/ أمين خليل</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="dashboard-wrapper">
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <h5><i class="bi bi-mortarboard-fill"></i> منصة أ/ أمين خليل</h5>
+      </div>
+      <ul class="sidebar-nav nav flex-column">
+        <li class="nav-item">
+          <a href="dashboard.html" class="nav-link active">
+            <i class="bi bi-grid-fill"></i> الرئيسية
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="my-courses.html" class="nav-link">
+            <i class="bi bi-book-fill"></i> كورساتي
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="notes.html" class="nav-link">
+            <i class="bi bi-file-earmark-pdf-fill"></i> الملازم والامتحانات
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="subscription.html" class="nav-link">
+            <i class="bi bi-cart-fill"></i> اشتراك جديد
+          </a>
+        </li>
+        <li class="nav-item mt-auto" style="margin-top: 2rem !important;">
+          <a href="index.html" class="nav-link">
+            <i class="bi bi-box-arrow-right"></i> تسجيل الخروج
+          </a>
+        </li>
+      </ul>
+    </aside>
+
+    <!-- Sidebar Toggle (Mobile) -->
+    <button class="sidebar-toggle" id="sidebarToggle">
+      <i class="bi bi-list"></i>
+    </button>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Welcome Bar -->
+      <div class="welcome-bar animate-fade-in-up">
+        <div>
+          <h3>مرحباً أحمد محمد 👋</h3>
+          <p>أهلاً بك في منصتك التعليمية</p>
+        </div>
+        <div class="profile-img-container">
+          <img src="https://ui-avatars.com/api/?name=أحمد+محمد&background=3B82F6&color=fff&size=120&font-size=0.4" alt="صورة الطالب" class="profile-img" id="profileImg">
+          <label class="profile-img-upload" for="profileUpload">
+            <i class="bi bi-camera-fill"></i>
+          </label>
+          <input type="file" id="profileUpload" accept="image/*" style="display:none;">
+        </div>
+      </div>
+
+      <!-- Stats -->
+      <div class="row g-3 mb-4">
+        <div class="col-6 col-md-3 animate-fade-in-up animate-delay-1">
+          <div class="stat-card">
+            <div class="stat-icon" style="background:rgba(59,130,246,0.15);color:var(--color-primary);">
+              <i class="bi bi-book-fill"></i>
+            </div>
+            <div class="stat-number">3</div>
+            <div class="stat-label">كورسات مشترك بها</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3 animate-fade-in-up animate-delay-2">
+          <div class="stat-card">
+            <div class="stat-icon" style="background:rgba(34,197,94,0.15);color:var(--color-accent);">
+              <i class="bi bi-check-circle-fill"></i>
+            </div>
+            <div class="stat-number">12</div>
+            <div class="stat-label">درس مكتمل</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3 animate-fade-in-up animate-delay-3">
+          <div class="stat-card">
+            <div class="stat-icon" style="background:rgba(234,179,8,0.15);color:#eab308;">
+              <i class="bi bi-clipboard-data-fill"></i>
+            </div>
+            <div class="stat-number">5</div>
+            <div class="stat-label">امتحانات</div>
+          </div>
+        </div>
+        <div class="col-6 col-md-3 animate-fade-in-up animate-delay-4">
+          <div class="stat-card">
+            <div class="stat-icon" style="background:rgba(168,85,247,0.15);color:#a855f7;">
+              <i class="bi bi-file-earmark-pdf-fill"></i>
+            </div>
+            <div class="stat-number">8</div>
+            <div class="stat-label">ملزمة متاحة</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Available Courses -->
+      <h4 class="mb-3" style="font-weight:700;">
+        <i class="bi bi-collection-fill" style="color:var(--color-primary);"></i>
+        الكورسات المتاحة — الصف الثالث الثانوي
+      </h4>
+
+      <div class="row g-4">
+        <!-- Course 1 -->
+        <div class="col-md-6 col-lg-4 animate-fade-in-up animate-delay-1">
+          <div class="course-card">
+            <div class="course-card-img d-flex align-items-center justify-content-center">
+              <i class="bi bi-book-half" style="font-size:3rem;color:rgba(255,255,255,0.6);"></i>
+            </div>
+            <div class="course-card-body">
+              <div class="d-flex justify-content-between align-items-start mb-2">
+                <span class="course-badge">الصف الثالث</span>
+                <span class="course-price">150 ج.م</span>
+              </div>
+              <h5>النحو — الفصل الأول</h5>
+              <p>شرح مفصل لقواعد النحو للفصل الدراسي الأول</p>
+              <a href="subscription.html" class="btn btn-primary-custom btn-sm w-100">
+                <i class="bi bi-cart-plus-fill"></i> اشترك الآن
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Course 2 -->
+        <div class="col-md-6 col-lg-4 animate-fade-in-up animate-delay-2">
+          <div class="course-card">
+            <div class="course-card-img d-flex align-items-center justify-content-center" style="background:linear-gradient(135deg,#22c55e,#16a34a);">
+              <i class="bi bi-pen-fill" style="font-size:3rem;color:rgba(255,255,255,0.6);"></i>
+            </div>
+            <div class="course-card-body">
+              <div class="d-flex justify-content-between align-items-start mb-2">
+                <span class="course-badge">الصف الثالث</span>
+                <span class="course-price">200 ج.م</span>
+              </div>
+              <h5>البلاغة — الفصل الأول</h5>
+              <p>دروس البلاغة كاملة مع تمارين وأمثلة تطبيقية</p>
+              <a href="subscription.html" class="btn btn-primary-custom btn-sm w-100">
+                <i class="bi bi-cart-plus-fill"></i> اشترك الآن
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Course 3 -->
+        <div class="col-md-6 col-lg-4 animate-fade-in-up animate-delay-3">
+          <div class="course-card">
+            <div class="course-card-img d-flex align-items-center justify-content-center" style="background:linear-gradient(135deg,#a855f7,#7c3aed);">
+              <i class="bi bi-journal-text" style="font-size:3rem;color:rgba(255,255,255,0.6);"></i>
+            </div>
+            <div class="course-card-body">
+              <div class="d-flex justify-content-between align-items-start mb-2">
+                <span class="course-badge">الصف الثالث</span>
+                <span class="course-price">180 ج.م</span>
+              </div>
+              <h5>الأدب والنصوص — الفصل الأول</h5>
+              <p>شرح الأدب والنصوص مع التحليل والمناقشة</p>
+              <a href="subscription.html" class="btn btn-primary-custom btn-sm w-100">
+                <i class="bi bi-cart-plus-fill"></i> اشترك الآن
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Sidebar toggle
+    document.getElementById('sidebarToggle').addEventListener('click', function() {
+      document.getElementById('sidebar').classList.toggle('show');
+    });
+
+    // Profile image upload preview
+    document.getElementById('profileUpload').addEventListener('change', function(e) {
+      const file = e.target.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = function(ev) {
+          document.getElementById('profileImg').src = ev.target.result;
+        };
+        reader.readAsDataURL(file);
+      }
+    });
+  </script>
+</body>
+</html>
